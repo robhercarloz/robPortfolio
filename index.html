@@ -27,12 +27,15 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
 
+
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Navigation==========================================-->
@@ -199,8 +202,9 @@
     </div>
 
     <!-- JS Projects / Coding Challenges Section -->
-    <div id="portfolio" class="text-center">
+    <div id="portfolio" class="text-center" style="background:#f6f6f6">
         <div class="container">
+            <!--title-->
             <div class="section-title">
                 <h2>JavaScript Coding Challenges</h2>
                 <p>Fun javascript programs to try out. Click to test them out.</p>
@@ -284,43 +288,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <!--<div class="col-sm-6 col-md-4 col-lg-4">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                    <div class="hover-text">
-                                        <h4>Dolor Sit</h4>
-                                    </div>
-                                    <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                    <div class="hover-text">
-                                        <h4>Lorem Ipsum</h4>
-                                    </div>
-                                    <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4">
-                        <div class="portfolio-item">
-                            <div class="hover-bg">
-                                <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                    <div class="hover-text">
-                                        <h4>Adipiscing Elit</h4>
-                                    </div>
-                                    <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title">
-                                </a>
-                            </div>
-                        </div>
-                    </div>-->
+                    </div>                   
                 </div>
             </div>
         </div>
@@ -328,20 +296,54 @@
 
     <!--Modal 1: Simple Math-->
     <div class="modal fade" id="myModal1">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Number Sort</h4>
+                    <h4 class="modal-title">Javascript Challenge 1</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-
                 <!-- Modal body -->
-                <div class="modal-body">
-                    <p>Sort an array of numbers</p>
-
+                <div class="modal-body">                    
+                        <!--Title-->
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <h4>MATH EXERCISE</h4>
+                                <p>In this exercise you will input 5 numbers and recieve the output of the 
+                                smallest, greatest, average, sum, and product of the numbers.</p>
+                            </div>
+                        </div>
+                        <!--input/output-->
+                        <div class="row">
+                            <!--Input Fields-->
+                            <div class="col-lg-6 text-center">
+                                <h5>Enter 5 numbers below</h5>
+                                <input id="n1" type="text" placeholder="ENTER NUMBER" />
+                                <input id="n2" type="text" placeholder="ENTER NUMBER" />
+                                <input id="n3" type="text" placeholder="ENTER NUMBER" />
+                                <input id="n4" type="text" placeholder="ENTER NUMBER" />
+                                <input id="n5" type="text" placeholder="ENTER NUMBER" />
+                            </div>
+                            <!--displaying results-->
+                            <div class="col-lg-6 text-center">
+                                <h5>Results</h5>
+                                <p id="mathResult"></p>
+                            </div>
+                            
+                        </div>
+                        <!--Buttons-->
+                        <div class="row">
+                            <div class="col-lg-4 text-center">
+                                <button id="btnCalculate" class="btn btn-success">Calculate</button>
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <button id="btnShowCode" class="btn btn-success">Show Code</button>
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <button id="btnClear" class="btn btn-success">Clear</button>
+                            </div>
+                        </div>
                 </div>
-
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -351,19 +353,47 @@
     </div>
     <!--Modal 2: Factorial-->
     <div class="modal fade" id="myModal2">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Factorial</h4>
+                    <h4 class="modal-title">Coding Challenge 2</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-
                 <!-- Modal body -->
                 <div class="modal-body">
-                    DO something ...
+                    <!--Title-->
+                    <div class="row">
+                        <div class="col-lg text-center">
+                            <h3>Finding Factorial</h3>
+                            <p>In this challenge enter in a number below to find the facotrial of that number.</p>
+                            <h6>Factorial Equation: n! = 1*2*3*4*...*n</h6>
+                        </div>
+                    </div>
+                    <!--input/results-->
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <h5>Enter number below</h5>
+                            <input id="inputFactorialN" type="text" placeholder="ENTER NUMBER" />
+                        </div>
+                        <div class="col-lg-6">
+                            <h5>Result</h5>
+                            <p id="rsltFactorial"></p>
+                        </div>
+                    </div>
+                    <!--Buttons-->
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <button id="btnFactorialCalc" class="btn btn-success">Find Factorial</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnFactorialShowCode" class="btn btn-success">Show Code</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnClearFactorial" class="btn btn-success">Clear</button>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -371,21 +401,53 @@
             </div>
         </div>
     </div>
-    <!--Modal 3-->
+    <!--Modal 3: FIZZBUZZ-->
     <div class="modal fade" id="myModal3">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">FizzBuzz</h4>
+                    <h4 class="modal-title">Coding Challenge 3</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Fizzz...
+                    <!--Title-->
+                    <div class="row">
+                        <div class="col-lg">
+                            <h3 style="text-align:center">FIZZBUZZ Exercise</h3>
+                            <p>
+                                In this exercise you will input 2 numbers. For each number that is a multiple of the first number, print "Fizz" instead of the number and for each 
+                                number that is a multiple of the second number it will display,"Buzz" instead of the number. For numbers that are multiples of both numbers, it print 
+                                "FizzBuzz" instead of the number.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Input and results-->
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <h5>Enter numbers below</h5>
+                            <input id="fbizzInput1" type="text" placeholder="ENTER NUMBER" />
+                            <input id="fbizzInput2" type="text" placeholder="ENTER NUMBER" />
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <h5>Result</h5>
+                            <p id="rsltFizzBuzz" style="word-wrap: break-word"></p>
+                        </div>
+                    </div>
+                    <!--Buttons-->
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <button id="btnFizzBuzz" class="btn btn-success">FIZZBUZZ</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnFizzBuzzShowCode" class="btn btn-success">Show Code</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnFizzBuzzClear" class="btn btn-success">Clear</button>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -393,21 +455,48 @@
             </div>
         </div>
     </div>
-    <!--Modal 4-->
+    <!--Modal 4: PALINDROME-->
     <div class="modal fade" id="myModal4">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Palindrome</h4>
+                    <h4 class="modal-title">Coding Challenge 4</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-
                 <!-- Modal body -->
                 <div class="modal-body">
-                    do something... wow
+                    <!--Title-->
+                    <div class="row">
+                        <div class="col-lg text-center">
+                            <h3>Palindrome Exercise</h3>
+                            <p>A palindrome is a word that is spelled the same backwords. Type in a word or string of characters to see if it is a palindrome.</p>
+                        </div>
+                    </div>
+                    <!--Input/Result-->
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <h5> Enter in text in below</h5>
+                            <input id="inputPalindrome" type="text" placeholder="ENTER TEXT HERE"/>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <h5>Result</h5>
+                            <p id="rsltPalindrome"></p>
+                        </div>
+                    </div>
+                    <!--Buttons-->
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <button id="btnPalindrome" class="btn btn-success">Palindrome?</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnPalindromeShowCode" class="btn btn-success">Show Code</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnClearPalindrome" class="btn btn-success">Clear</button>
+                        </div>
+                    </div>
                 </div>
-
                 <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -421,7 +510,7 @@
             <div class="modal-content">
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Challenge 5</h4>
+                    <h4 class="modal-title">Code Challenge 5</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -459,76 +548,11 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Portfolio Projects Section -->
-    <!--<div id="testimonials">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Portfolio Projects</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <div class="testimonial-image"> <img src="img/testimonials/01.jpg" alt=""> </div>
-                        <div class="testimonial-content">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."</p>
-                            <div class="testimonial-meta"> - John Doe </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <div class="testimonial-image"> <img src="img/testimonials/02.jpg" alt=""> </div>
-                        <div class="testimonial-content">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis."</p>
-                            <div class="testimonial-meta"> - Johnathan Doe </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <div class="testimonial-image"> <img src="img/testimonials/03.jpg" alt=""> </div>
-                        <div class="testimonial-content">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."</p>
-                            <div class="testimonial-meta"> - John Doe </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row"> </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <div class="testimonial-image"> <img src="img/testimonials/04.jpg" alt=""> </div>
-                        <div class="testimonial-content">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."</p>
-                            <div class="testimonial-meta"> - Johnathan Doe </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <div class="testimonial-image"> <img src="img/testimonials/05.jpg" alt=""> </div>
-                        <div class="testimonial-content">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."</p>
-                            <div class="testimonial-meta"> - John Doe </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <div class="testimonial-image"> <img src="img/testimonials/06.jpg" alt=""> </div>
-                        <div class="testimonial-content">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis."</p>
-                            <div class="testimonial-meta"> - Johnathan Doe </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
+    
+    
 
     <!-- Resume Section -->
-    <div id="team" class="text-center" style="background:#f6f6f6">
+    <div id="team" class="text-center">
         <div class="container">
             <div class="col-md-8 col-md-offset-2 section-title">
                 <h2>Resume</h2>
@@ -639,7 +663,7 @@
                 <div class="row">
                     <div class="social">
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-github"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             <li><a href="#"><i class="fa fa-youtube"></i></a></li>
@@ -666,5 +690,8 @@
     <script type="text/javascript" src="Content/jqBootstrapValidation.js"></script>
     <script type="text/javascript" src="Content/contact_me.js"></script>
     <script type="text/javascript" src="Content/main.js"></script>
+    <script src="Scripts/jsCodeChallenges.js"></script>
+
+
 </body>
 </html>
