@@ -36,6 +36,18 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+
+
+<!--Syntax Highlighter-->
+<link href="Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" />
+<link href="Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" />
+
+<!--MUST HAVE-->
+<script src="Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+<script src="Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+ <!--Custom CSS Files-->
+
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <!-- Navigation==========================================-->
@@ -209,6 +221,7 @@
                 <h2>JavaScript Coding Challenges</h2>
                 <p>Fun javascript programs to try out. Click to test them out.</p>
             </div>
+            <!--Modals-->
             <div class="row">
                 <div class="portfolio-items">
                     <!--1st coding challenge-->
@@ -288,7 +301,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>                   
+                    </div>
                 </div>
             </div>
         </div>
@@ -304,45 +317,81 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <!-- Modal body -->
-                <div class="modal-body">                    
-                        <!--Title-->
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <h4>MATH EXERCISE</h4>
-                                <p>In this exercise you will input 5 numbers and recieve the output of the 
-                                smallest, greatest, average, sum, and product of the numbers.</p>
-                            </div>
+                <div class="modal-body">
+                    <!--Title-->
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h4>MATH EXERCISE</h4>
+                            <p>
+                                In this exercise you will input 5 numbers and recieve the output of the
+                                smallest, greatest, average, sum, and product of the numbers.
+                            </p>
                         </div>
-                        <!--input/output-->
-                        <div class="row">
-                            <!--Input Fields-->
-                            <div class="col-lg-6 text-center">
-                                <h5>Enter 5 numbers below</h5>
-                                <input id="n1" type="text" placeholder="ENTER NUMBER" />
-                                <input id="n2" type="text" placeholder="ENTER NUMBER" />
-                                <input id="n3" type="text" placeholder="ENTER NUMBER" />
-                                <input id="n4" type="text" placeholder="ENTER NUMBER" />
-                                <input id="n5" type="text" placeholder="ENTER NUMBER" />
-                            </div>
-                            <!--displaying results-->
-                            <div class="col-lg-6 text-center">
-                                <h5>Results</h5>
-                                <p id="mathResult"></p>
-                            </div>
-                            
+                    </div>
+                    <!--input/output-->
+                    <div class="row">
+                        <!--Input Fields-->
+                        <div class="col-lg-6 text-center">
+                            <h5>Enter 5 numbers below</h5>
+                            <input id="n1" type="text" placeholder="ENTER NUMBER" />
+                            <input id="n2" type="text" placeholder="ENTER NUMBER" />
+                            <input id="n3" type="text" placeholder="ENTER NUMBER" />
+                            <input id="n4" type="text" placeholder="ENTER NUMBER" />
+                            <input id="n5" type="text" placeholder="ENTER NUMBER" />
                         </div>
-                        <!--Buttons-->
-                        <div class="row">
-                            <div class="col-lg-4 text-center">
-                                <button id="btnCalculate" class="btn btn-success">Calculate</button>
-                            </div>
-                            <div class="col-lg-4 text-center">
-                                <button id="btnShowCode" class="btn btn-success">Show Code</button>
-                            </div>
-                            <div class="col-lg-4 text-center">
-                                <button id="btnClear" class="btn btn-success">Clear</button>
-                            </div>
+                        <!--displaying results-->
+                        <div class="col-lg-6 text-center">
+                            <h5>Results</h5>
+                            <p id="mathResult"></p>
                         </div>
+
+                    </div>
+                    <!--Buttons-->
+                    <div class="row">
+                        <div class="col-lg-4 text-center">
+                            <button id="btnCalculate" class="btn btn-success">Calculate</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnShowCodeMath" class="btn btn-success">Show Code</button>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <button id="btnClear" class="btn btn-success">Clear</button>
+                        </div>
+                    </div>
+                    <!--Show Code-->
+                    <div class="row">
+                        <div class="col-lg">
+                            <div id="ShowCodeMath">
+                                <pre class="brush: js">
+                                    //click btn to do math 
+                                    $("#btnCalculate").click(function(){
+                                    //store inputs into variables
+                                    var n1 = Number($("#n1").val());
+                                    var n2 = Number($("#n2").val());
+                                    var n3 = Number($("#n3").val());
+                                    var n4 = Number($("#n4").val());
+                                    var n5 = Number($("#n5").val());
+                                    //Do Math
+                                    var smallest = Math.min(n1,n2,n3,n4,n5);
+                                    var largest = Math.max(n1,n2,n3,n4,n5);
+                                    var sum = n1 + n2 + n3 + n4 + n5;
+                                    var product = n1 * n2 * n3 * n4 * n5;
+                                    var avg = sum / 5;
+                                    //display results
+                                    $("#mathResult").text("The smallest number is: " + smallest + "\nThe largest number is : " + largest + "\nThe average of all 5 is: " + avg
+                                    + "\nThe sum of the numbers is: " + sum + "\nThe product of the numbers is: " + product);  
+                                    });
+                                    //Try again button is clicked
+                                    $("#btnClear").click(function(){
+                                    //clear textboxes
+                                    $("#n1,#n2,#n3,#n4,#n5").val("");
+                                    //clear result fields
+                                    $("#mathResult").text("")
+                                    });
+                                </pre>
+                            </div>    
+                        </div>
+                    </div>
                 </div>
                 <!-- Modal footer -->
                 <div class="modal-footer">
@@ -417,8 +466,8 @@
                         <div class="col-lg">
                             <h3 style="text-align:center">FIZZBUZZ Exercise</h3>
                             <p>
-                                In this exercise you will input 2 numbers. For each number that is a multiple of the first number, print "Fizz" instead of the number and for each 
-                                number that is a multiple of the second number it will display,"Buzz" instead of the number. For numbers that are multiples of both numbers, it print 
+                                In this exercise you will input 2 numbers. For each number that is a multiple of the first number, print "Fizz" instead of the number and for each
+                                number that is a multiple of the second number it will display,"Buzz" instead of the number. For numbers that are multiples of both numbers, it print
                                 "FizzBuzz" instead of the number.
                             </p>
                         </div>
@@ -477,7 +526,7 @@
                     <div class="row">
                         <div class="col-lg-6 text-center">
                             <h5> Enter in text in below</h5>
-                            <input id="inputPalindrome" type="text" placeholder="ENTER TEXT HERE"/>
+                            <input id="inputPalindrome" type="text" placeholder="ENTER TEXT HERE" />
                         </div>
                         <div class="col-lg-6 text-center">
                             <h5>Result</h5>
@@ -548,8 +597,6 @@
             </div>
         </div>
     </div>
-    
-    
 
     <!-- Resume Section -->
     <div id="team" class="text-center">
@@ -681,8 +728,7 @@
         </div>
     </div>
 
-    <!--JAVASCRIPT FILES-->
-
+    <!--JAVASCRIPT TEMPLATE FILES-->
     <script type="text/javascript" src="Content/jquery.1.11.1.js"></script>
     <script type="text/javascript" src="Content/bootstrap.js"></script>
     <script type="text/javascript" src="Content/SmoothScroll.js"></script>
@@ -690,8 +736,14 @@
     <script type="text/javascript" src="Content/jqBootstrapValidation.js"></script>
     <script type="text/javascript" src="Content/contact_me.js"></script>
     <script type="text/javascript" src="Content/main.js"></script>
+    <!--JAVASCRIPT SYNTAX HIGHLIGHTER MUST HAVE-->
+    <script src="Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+    <script src="Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+    <!--SYNTAX HIGHLIGHTER SCRIPT-->
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <!--JAVASCRIPT CODE CHALLENGES-->
     <script src="Scripts/jsCodeChallenges.js"></script>
-
-
 </body>
 </html>

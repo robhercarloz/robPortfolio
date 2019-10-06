@@ -1,9 +1,20 @@
 //Code Challenge 1: MATH 
-//performs function for document
+//When page is completely loaded then it will run this function
 $(document).ready(function(){
     //------------------------------------------------------------------
     //Math Exercise
 
+    //Hide Code
+    $("#ShowCodeMath").hide();
+    $("#btnShowCodeMath").click(function () {
+        $("#ShowCodeMath").toggle();
+
+        if ($(this).text() == "Show Code") {
+            $(this).text("Hide Code");
+        } else {
+            $(this).text("Show Code")
+        };
+    });
     //click btn to do math 
     $("#btnCalculate").click(function(){
         //store inputs into variables
@@ -30,6 +41,15 @@ $(document).ready(function(){
         $("#mathResult").text("")
     });
     //show code
+    //$("#btnShowCodeMath").click(function () {
+    //    $("#ShowCodeMath").toggle();
+    //    if ($(this).text() == "Show Code") {
+    //        $(this).text("Hide Code");
+    //    }else {
+    //        $(this).text("Show Code")
+    //    };
+    //});
+
 
     //----------------------------------------------------------------------
     //FACTORIAL Exercise
