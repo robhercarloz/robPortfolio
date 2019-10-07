@@ -8,9 +8,9 @@ $(document).ready(function () {
     $("#ShowCodePalindrome").hide();
     //------------------------------------------------------------------
     //Math Exercise
-        
+
     //click btn to do math 
-    $("#btnCalculate").click(function(){
+    $("#btnCalculate").click(function () {
         //store inputs into variables
         var n1 = Number($("#n1").val());
         var n2 = Number($("#n2").val());
@@ -18,15 +18,15 @@ $(document).ready(function () {
         var n4 = Number($("#n4").val());
         var n5 = Number($("#n5").val());
         //Do Math
-        var smallest = Math.min(n1,n2,n3,n4,n5);
-        var largest = Math.max(n1,n2,n3,n4,n5);
+        var smallest = Math.min(n1, n2, n3, n4, n5);
+        var largest = Math.max(n1, n2, n3, n4, n5);
         var sum = n1 + n2 + n3 + n4 + n5;
         var product = n1 * n2 * n3 * n4 * n5;
         var avg = sum / 5;
         //display results
         $("#mathResult").text("The smallest number is: " + smallest + "\nThe largest number is : " + largest + "\nThe average of all 5 is: " + avg
-        + "\nThe sum of the numbers is: " + sum + "\nThe product of the numbers is: " + product);  
-    });
+            + "\nThe sum of the numbers is: " + sum + "\nThe product of the numbers is: " + product);
+    });    
     //Try again button is clicked
     $("#btnClear").click(function(){
         //clear textboxes
@@ -102,7 +102,7 @@ $(document).ready(function () {
             if(i % n1 == 0 && i % n2 == 0){
                 output += "FIZZBUZZ"
             }else if(i % n1 == 0){
-                output += "Fizz"
+                output += "fizz"
             }else if(i % n2 == 0){
                 output += "buzz"
             }else{
@@ -132,29 +132,28 @@ $(document).ready(function () {
     //Palindrome Exercise
 
     //palindrome button clicked
-    $("#btnPalindrome").click(function(){
+    $("#btnPalindrome").click(function () {
         //get text to test
         //if statement to check if user typed anything in
-        
+
         //get word
         var word = $("#inputPalindrome").val();
         //function to check word
         function palindrome(word) {
-                //Split, reverse and join string to get reversed text
-                var reversedText = word.toLowerCase().split('').reverse().join('');
-                //check to see if the word matches first word           
-                return word === reversedText;
-            }
+            //Split, reverse and join string to get reversed text
+            var reversedText = word.toLowerCase().split('').reverse().join('');
+            //check to see if the word matches first word           
+            return word === reversedText;
+        }
         //simple if statement to check if function returns true or false
         if (palindrome(word) == true) {
             var torFalse = "is";
         } else {
-             torFalse = "is not";
+            torFalse = "is not";
         }
         //display result
         $("#rsltPalindrome").text("The word " + word + " " + torFalse + " a palindrome.");
-                
-    });
+    });    
     //clear button is clicked
     $("#btnClearPalindrome").click(function(){
         $("#inputPalindrome").val("");
