@@ -86,6 +86,7 @@
     <Content Include="Images\404notFound.jpg" />
     <Content Include="Images\about.jpg" />
     <Content Include="Images\apple-touch-icon.png" />
+    <Content Include="Images\bkWall.jpg" />
     <Content Include="Images\cap.jpg" />
     <Content Include="Images\comingSoonJS.jpg" />
     <Content Include="Images\comingSoonJS1.jpg" />
