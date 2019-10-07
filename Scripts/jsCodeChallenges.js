@@ -1,13 +1,14 @@
 //Code Challenge 1: MATH 
 //When page is completely loaded then it will run this function
 $(document).ready(function () {
-    //Hide code in Modals 
+    //Hide code in Modals -------------------------------------------------
     $("#ShowCodeMath").hide();
     $("#ShowCodeFactorial").hide();
     $("#ShowCodeFizzBuzz").hide();
     $("#ShowCodePalindrome").hide();
-    //------------------------------------------------------------------
-    //Math Exercise
+
+
+    //MATH Exercise----------------------------------------------------------
 
     //click btn to do math 
     $("#btnCalculate").click(function () {
@@ -24,15 +25,22 @@ $(document).ready(function () {
         var product = n1 * n2 * n3 * n4 * n5;
         var avg = sum / 5;
         //display results
-        $("#mathResult").text("The smallest number is: " + smallest + "\nThe largest number is : " + largest + "\nThe average of all 5 is: " + avg
-            + "\nThe sum of the numbers is: " + sum + "\nThe product of the numbers is: " + product);
+        $("#rsltSmallN").text("The smallest number is: " + smallest);
+        $("#rsltLargeN").text("The largest number is: " + largest);
+        $("#rsltAvgN").text("The average number is: " + avg);
+        $("#rsltSumN").text("The sum number is: " + sum);
+        $("#rsltProductN").text("The Product number is: " + product);        
     });    
     //Try again button is clicked
     $("#btnClear").click(function(){
         //clear textboxes
         $("#n1,#n2,#n3,#n4,#n5").val("");
         //clear result fields
-        $("#mathResult").text("")
+        $("#rsltSmallN").text("");
+        $("#rsltLargeN").text("");
+        $("#rsltAvgN").text("");
+        $("#rsltSumN").text("");
+        $("#rsltProductN").text("");
     });
     //show code
     $("#btnShowCodeMath").click(function () {
@@ -88,7 +96,7 @@ $(document).ready(function () {
     });
 
     //----------------------------------------------------------------------
-    //fizzbuzz Exercise
+    //FIZZBUZZ Exercise
 
     //fizzbuzz button is clicked
     $("#btnFizzBuzz").click(function(){
@@ -129,7 +137,7 @@ $(document).ready(function () {
     });
 
     //---------------------------------------------------------------------
-    //Palindrome Exercise
+    //PALINDROME Exercise
 
     //palindrome button clicked
     $("#btnPalindrome").click(function () {

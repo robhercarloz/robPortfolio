@@ -26,7 +26,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
-
+<link href="Content/custom.css" rel="stylesheet" />
 
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -322,10 +322,10 @@
 
     <!--Modal 1: Simple Math-->
     <div class="modal fade" id="myModal1">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <!-- Modal Header -->
-                <div class="modal-header">
+                <div class="modal-header my-header-custom">
                     <h4 class="modal-title">Javascript Challenge 1</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -333,7 +333,7 @@
                 <div class="modal-body">
                     <!--Title-->
                     <div class="row">
-                        <div class="col-lg-12 text-center">
+                        <div class="col-md-12 text-center">
                             <h4>MATH EXERCISE</h4>
                             <p>
                                 In this exercise you will input 5 numbers and recieve the output of the
@@ -344,31 +344,54 @@
                     <!--input/output-->
                     <div class="row">
                         <!--Input Fields-->
-                        <div class="col-lg-6 text-left">
+                        <div class="col-md-6 text-left">                            
                             <h5>Enter 5 numbers below</h5>
-                            <input id="n1" type="text" placeholder="ENTER NUMBER" />
-                            <input id="n2" type="text" placeholder="ENTER NUMBER" />
-                            <input id="n3" type="text" placeholder="ENTER NUMBER" />
-                            <input id="n4" type="text" placeholder="ENTER NUMBER" />
-                            <input id="n5" type="text" placeholder="ENTER NUMBER" />
+                            <div class="row my-row-math">
+                                <input id="n1" type="text" required placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>
+                            <div class="row my-row-math">
+                                <input id="n2" type="text" required placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>
+                            <div class="row my-row-math">
+                                <input id="n3" type="text" required placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>
+                            <div class="row my-row-math">
+                                <input id="n4" type="text" required placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>
+                            <div class="row my-row-math">
+                                <input id="n5" type="text" required placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>                      
                         </div>
                         <!--displaying results-->
-                        <div class="col-lg-6 text-center">
+                        <div class="col-md-6">
                             <h5>Results</h5>
-                            <p id="mathResult"></p>
+                            <div class="row">
+                                <p id="rsltSmallN"></p>
+                            </div>
+                            <div class="row">
+                                <p id="rsltLargeN"></p>
+                            </div>
+                            <div class="row">
+                                <p id="rsltAvgN"></p>
+                            </div>
+                            <div class="row">
+                                <p id="rsltSumN"></p>
+                            </div>
+                            <div class="row">
+                                <p id="rsltProductN"></p>
+                            </div>
                         </div>
-
                     </div>
                     <!--Buttons-->
-                    <div class="row" style="padding: 5px 5px 5px 5px">
-                        <div class="col-lg-4 text-center">
-                            <button id="btnCalculate" class="btn btn-success">Calculate</button>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <button id="btnCalculate" class="btn btn-success my-btn-calculate">Calculate</button>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <button id="btnShowCodeMath" class="btn btn-success">Show Code</button>
+                            <button id="btnShowCodeMath" class="btn btn-warning my-btn-calculate">Show Code</button>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <button id="btnClear" class="btn btn-success">Clear</button>
+                            <button id="btnClear" class="btn my-btn-clear">Clear</button>
                         </div>
                     </div>
                     <!--Show Code-->
@@ -407,7 +430,7 @@
                     </div>
                 </div>
                 <!-- Modal footer -->
-                <div class="modal-footer">
+                <div class="modal-footer my-footer-custom">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -415,10 +438,10 @@
     </div>
     <!--Modal 2: Factorial-->
     <div class="modal fade" id="myModal2">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <!-- Modal Header -->
-                <div class="modal-header">
+                <div class="modal-header my-header-custom">
                     <h4 class="modal-title">Coding Challenge 2</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -426,7 +449,7 @@
                 <div class="modal-body" >
                     <!--Title-->
                     <div class="row">
-                        <div class="col-lg text-center">
+                        <div class="col-md text-center">
                             <h3>Finding Factorial</h3>
                             <p>In this challenge enter in a number below to find the facotrial of that number.</p>
                             <h6>Factorial Equation: n! = 1*2*3*4*...*n</h6>
@@ -434,25 +457,27 @@
                     </div>
                     <!--input/output-->
                     <div class="row">
-                        <div class="col-lg-6 text-left">
+                        <div class="col-md-6 text-left">
                             <h5>Enter number below</h5>
-                            <input id="inputFactorialN" type="text" placeholder="ENTER NUMBER" />
+                            <div class="row my-row-math">
+                                <input id="inputFactorialN" type="text" placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>                           
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                             <h5>Result</h5>
                             <p id="rsltFactorial"></p>
                         </div>
                     </div>
                     <!--Buttons-->
                     <div class="row" style="padding: 5px 5px 5px 5px">
-                        <div class="col-lg-4 text-center">
-                            <button id="btnFactorialCalc" class="btn btn-success">Find Factorial</button>
+                        <div class="col-md-4 text-center">
+                            <button id="btnFactorialCalc" class="btn btn-success my-btn-calculate">Find Factorial</button>
                         </div>
-                        <div class="col-lg-4 text-center">
-                            <button id="btnFactorialShowCode" class="btn btn-success">Show Code</button>
+                        <div class="col-md-4 text-center">
+                            <button id="btnFactorialShowCode" class="btn btn-warning my-btn-calculate">Show Code</button>
                         </div>
-                        <div class="col-lg-4 text-center">
-                            <button id="btnClearFactorial" class="btn btn-success">Clear</button>
+                        <div class="col-md-4 text-center">
+                            <button id="btnClearFactorial" class="btn my-btn-clear">Clear</button>
                         </div>
                     </div>
                     <!--Show Code-->
@@ -505,7 +530,7 @@
                     </div>
                 </div>
                 <!-- Modal footer -->
-                <div class="modal-footer">
+                <div class="modal-footer my-footer-custom">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -513,10 +538,10 @@
     </div>
     <!--Modal 3: FIZZBUZZ-->
     <div class="modal fade" id="myModal3">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content ">
                 <!-- Modal Header -->
-                <div class="modal-header">
+                <div class="modal-header my-header-custom">
                     <h4 class="modal-title">Coding Challenge 3</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -524,8 +549,8 @@
                 <div class="modal-body">
                     <!--Title-->
                     <div class="row">
-                        <div class="col-lg">
-                            <h3 style="text-align:center">FIZZBUZZ Exercise</h3>
+                        <div class="col-md text-center">
+                            <h3>FIZZBUZZ Exercise</h3>
                             <p>
                                 In this exercise you will input 2 numbers. For each number that is a multiple of the first number, print "Fizz" instead of the number and for each
                                 number that is a multiple of the second number it will display,"Buzz" instead of the number. For numbers that are multiples of both numbers, it print
@@ -535,12 +560,16 @@
                     </div>
                     <!--Input and results-->
                     <div class="row">
-                        <div class="col-lg-6 text-left">
+                        <div class="col-md-6 text-left">
                             <h5>Enter numbers below</h5>
-                            <input id="fbizzInput1" type="text" placeholder="ENTER NUMBER" />
-                            <input id="fbizzInput2" type="text" placeholder="ENTER NUMBER" />
+                            <div class="row my-row-math">
+                                <input id="fbizzInput1" type="text" placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>
+                            <div class="row my-row-math">
+                                <input id="fbizzInput2" type="text" placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
+                            </div>                           
                         </div>
-                        <div class="col-lg-6 text-center">
+                        <div class="col-md-6 text-center">
                             <h5>Result</h5>
                             <p id="rsltFizzBuzz" style="word-wrap: break-word"></p>
                         </div>
@@ -548,13 +577,13 @@
                     <!--Buttons-->
                     <div class="row" style="padding: 5px 5px 5px 5px">
                         <div class="col-lg-4 text-center">
-                            <button id="btnFizzBuzz" class="btn btn-success">FIZZBUZZ</button>
+                            <button id="btnFizzBuzz" class="btn btn-success my-btn-calculate">FIZZBUZZ</button>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <button id="btnFizzBuzzShowCode" class="btn btn-success">Show Code</button>
+                            <button id="btnFizzBuzzShowCode" class="btn btn-warning my-btn-calculate">Show Code</button>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <button id="btnFizzBuzzClear" class="btn btn-success">Clear</button>
+                            <button id="btnFizzBuzzClear" class="btn my-btn-clear">Clear</button>
                         </div>
                     </div>
                     <!--Show Code-->
@@ -605,7 +634,7 @@
                     </div>
                 </div>
                 <!-- Modal footer -->
-                <div class="modal-footer">
+                <div class="modal-footer my-footer-custom">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -613,10 +642,10 @@
     </div>
     <!--Modal 4: PALINDROME-->
     <div class="modal fade" id="myModal4">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <!-- Modal Header -->
-                <div class="modal-header">
+                <div class="modal-header my-header-custom">
                     <h4 class="modal-title">Coding Challenge 4</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
@@ -643,13 +672,13 @@
                     <!--Buttons-->
                     <div class="row" style="padding: 5px 5px 5px 5px">
                         <div class="col-lg-4 text-center">
-                            <button id="btnPalindrome" class="btn btn-success">Palindrome?</button>
+                            <button id="btnPalindrome" class="btn btn-success my-btn-calculate">Palindrome?</button>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <button id="btnPalindromeShowCode" class="btn btn-success">Show Code</button>
+                            <button id="btnPalindromeShowCode" class="btn btn-warning my-btn-calculate">Show Code</button>
                         </div>
                         <div class="col-lg-4 text-center">
-                            <button id="btnClearPalindrome" class="btn btn-success">Clear</button>
+                            <button id="btnClearPalindrome" class="btn my-btn-clear my-btn-calculate">Clear</button>
                         </div>
                     </div>
                     <!--Show Code-->
@@ -690,7 +719,7 @@
                     </div>
                 </div>
                 <!-- Modal footer -->
-                <div class="modal-footer">
+                <div class="modal-footer my-footer-custom">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -866,7 +895,7 @@
     <!-- Footer Section -->
     <div id="footer">
         <div class="container text-center">
-            <p>Copyright: <i class="fa fa-love"></i><a href="#Home">HIRE ME PLS.</a></p>
+            <p>&copy; <i class="fa fa-love"></i><a href="mailTo:rhernandezroberto@Gmail.com">HIRE ME PLS.</a></p>
         </div>
     </div>
 
@@ -886,6 +915,18 @@
     <!--SYNTAX HIGHLIGHTER SCRIPT-->
     <script type="text/javascript">
         SyntaxHighlighter.all();
+
+        //validation
+        function numbersonly(e) {
+            var unicode = e.charCode ? e.charCode : e.keyCode
+            if (unicode != 8) { //if the key isn't the backspace key (which we should allow)
+                if (unicode < 48 || unicode > 57) //if not a number
+                    return false //disable key press
+            }
+        }
+    
+
     </script>
 </body>
 </html>
+

@@ -70,6 +70,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.js" />
     <Content Include="Content\contact_me.js" />
+    <Content Include="Content\custom.css" />
     <Content Include="Content\default.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\jqBootstrapValidation.js" />
