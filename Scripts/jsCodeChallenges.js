@@ -1,20 +1,14 @@
 //Code Challenge 1: MATH 
 //When page is completely loaded then it will run this function
-$(document).ready(function(){
+$(document).ready(function () {
+    //Hide code in Modals 
+    $("#ShowCodeMath").hide();
+    $("#ShowCodeFactorial").hide();
+    $("#ShowCodeFizzBuzz").hide();
+    $("#ShowCodePalindrome").hide();
     //------------------------------------------------------------------
     //Math Exercise
-
-    //Hide Code
-    $("#ShowCodeMath").hide();
-    $("#btnShowCodeMath").click(function () {
-        $("#ShowCodeMath").toggle();
-
-        if ($(this).text() == "Show Code") {
-            $(this).text("Hide Code");
-        } else {
-            $(this).text("Show Code")
-        };
-    });
+        
     //click btn to do math 
     $("#btnCalculate").click(function(){
         //store inputs into variables
@@ -41,15 +35,14 @@ $(document).ready(function(){
         $("#mathResult").text("")
     });
     //show code
-    //$("#btnShowCodeMath").click(function () {
-    //    $("#ShowCodeMath").toggle();
-    //    if ($(this).text() == "Show Code") {
-    //        $(this).text("Hide Code");
-    //    }else {
-    //        $(this).text("Show Code")
-    //    };
-    //});
-
+    $("#btnShowCodeMath").click(function () {
+        $("#ShowCodeMath").toggle();
+        if ($(this).text() == "Show Code") {
+            $(this).text("Hide Code");
+        }else {
+            $(this).text("Show Code");
+        };
+    });
 
     //----------------------------------------------------------------------
     //FACTORIAL Exercise
@@ -85,6 +78,14 @@ $(document).ready(function(){
         $("#rsltFactorial").text("");
     });    
     //show code
+    $("#btnFactorialShowCode").click(function () {
+        $("#ShowCodeFactorial").toggle();
+        if ($(this).text() == "Show Code") {
+            $(this).text("Hide Code");
+        } else {
+            $(this).text("Show Code");
+        };
+    });
 
     //----------------------------------------------------------------------
     //fizzbuzz Exercise
@@ -117,7 +118,15 @@ $(document).ready(function(){
         $("#fbizzInput2").val("");
         $("#rsltFizzBuzz").text("");
     });
-    //show code button cleared
+    //Show Code
+    $("#btnFizzBuzzShowCode").click(function () {
+        $("#ShowCodeFizzBuzz").toggle();
+        if ($(this).text() == "Show Code") {
+            $(this).text("Hide Code");
+        } else {
+            $(this).text("Show Code");
+        };
+    });
 
     //---------------------------------------------------------------------
     //Palindrome Exercise
@@ -125,15 +134,26 @@ $(document).ready(function(){
     //palindrome button clicked
     $("#btnPalindrome").click(function(){
         //get text to test
+        //if statement to check if user typed anything in
+        
+        //get word
         var word = $("#inputPalindrome").val();
+        //function to check word
         function palindrome(word) {
-            //Split, reverse and join string to get reversed text
-            var reversedText  = word.toLowerCase().split('').reverse().join('');
-            //check to see if the word matches first word           
-            return word === reversedText;
+                //Split, reverse and join string to get reversed text
+                var reversedText = word.toLowerCase().split('').reverse().join('');
+                //check to see if the word matches first word           
+                return word === reversedText;
+            }
+        //simple if statement to check if function returns true or false
+        if (palindrome(word) == true) {
+            var torFalse = "is";
+        } else {
+             torFalse = "is not";
         }
         //display result
-        $("#rsltPalindrome").text("The word: " + palindrome(word));
+        $("#rsltPalindrome").text("The word " + word + " " + torFalse + " a palindrome.");
+                
     });
     //clear button is clicked
     $("#btnClearPalindrome").click(function(){
@@ -141,7 +161,14 @@ $(document).ready(function(){
         $("#rsltPalindrome").text("");
     });
     //show code
-
+    $("#btnPalindromeShowCode").click(function () {
+        $("#ShowCodePalindrome").toggle();
+        if ($(this).text() == "Show Code") {
+            $(this).text("Hide Code");
+        } else {
+            $(this).text("Show Code");
+        };
+    });
 });
 
 

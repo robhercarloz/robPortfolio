@@ -230,7 +230,7 @@
                             <div class="hover-bg">
                                 <a href="" title="Coding Challenge 1" data-toggle="modal" data-target="#myModal1">
                                     <div class="hover-text">
-                                        <h4>Number Sort</h4>
+                                        <h4>Math Exercise</h4>
                                     </div>
                                     <img src="Images/numbers.jpg" class="img-responsive" alt="Coding Challenge 1">
                                 </a>
@@ -282,9 +282,9 @@
                             <div class="hover-bg">
                                 <a href="" title="Coding Challenge 5" data-toggle="modal" data-target="#myModal5">
                                     <div class="hover-text">
-                                        <h4>....</h4>
+                                        <h4>Code Challenge 5 Coming Soon</h4>
                                     </div>
-                                    <img src="" class="img-responsive" alt="Coding Challenge 5">
+                                    <img src="Images/comingSoonJS.jpg" class="img-responsive" alt="Coding Challenge 5">
                                 </a>
                             </div>
                         </div>
@@ -295,9 +295,9 @@
                             <div class="hover-bg">
                                 <a href="" title="Challenge 6" data-toggle="modal" data-target="#myModal6">
                                     <div class="hover-text">
-                                        <h4>....</h4>
+                                        <h4>Code Challenge 6 Coming Soon</h4>
                                     </div>
-                                    <img src="" class="img-responsive" alt="Coding Challenge 6">
+                                    <img src="Images/comingSoonJS1.jpg" class="img-responsive" alt="Coding Challenge 6">
                                 </a>
                             </div>
                         </div>
@@ -389,7 +389,7 @@
                                     $("#mathResult").text("")
                                     });
                                 </pre>
-                            </div>    
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -419,7 +419,7 @@
                             <h6>Factorial Equation: n! = 1*2*3*4*...*n</h6>
                         </div>
                     </div>
-                    <!--input/results-->
+                    <!--input/output-->
                     <div class="row">
                         <div class="col-lg-6 text-center">
                             <h5>Enter number below</h5>
@@ -440,6 +440,54 @@
                         </div>
                         <div class="col-lg-4 text-center">
                             <button id="btnClearFactorial" class="btn btn-success">Clear</button>
+                        </div>
+                    </div>
+                    <!--Show Code-->
+                    <div class="row">
+                        <div class="col-lg">
+                            <div id="ShowCodeFactorial">
+                                <pre class="brush: js">
+                                    //Calculate button clicked
+                                    $("#btnFactorialCalc").click(function(){
+                                    //DO MATH
+                                    var fN = Number($("#inputFactorialN").val());
+                                    //check to see if number is less than 170 otherwise proceed
+                                    if (fN > 170){
+                                    alert("Number has to be less than 170 and non-negative.");
+                                    //$("#inputFactorialN").val("");
+                                    }
+                                    //try using recursion to get factorial
+                                    function factorial(fN){
+                                    //terminate recursion function
+                                    if (fN < 0){
+                                        return;
+                                    }
+                                    //base case
+                                    if (fN === 0){
+                                        return 1;
+                                    }
+                                    //recursion
+                                    return fN * factorial(fN-1);
+                                    }
+                                    //display result
+                                    $("#rsltFactorial").text("The Factorial for " + fN  + " is: " + factorial(fN));
+                                    });    
+                                    //clear button clicked
+                                    $("#btnClearFactorial").click(function(){
+                                    $("#inputFactorialN").val("");
+                                    $("#rsltFactorial").text("");
+                                    });    
+                                    //show code
+                                    $("#btnFactorialShowCode").click(function () {
+                                        $("#ShowCodeFactorial").toggle();
+                                        if ($(this).text() == "Show Code") {
+                                        $(this).text("Hide Code");
+                                        } else {
+                                        $(this).text("Show Code");
+                                        };
+                                    });                                    
+                                </pre>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -496,6 +544,52 @@
                             <button id="btnFizzBuzzClear" class="btn btn-success">Clear</button>
                         </div>
                     </div>
+                    <!--Show Code-->
+                    <div class="row">
+                        <div class="col-lg">
+                            <div id="ShowCodeFizzBuzz">
+                                <pre class="brush: js">
+                                    //fizzbuzz button is clicked
+                                    $("#btnFizzBuzz").click(function(){
+                                    //initialize variabales
+                                    var n1 = $("#fbizzInput1").val();
+                                    var n2 = $("#fbizzInput2").val();
+                                    var output = "";
+                                    //making loop to count 100
+                                    for(var i = 1; i <= 100; i++){
+                                        //if statement to check if both inputs have remainders if true concatinate
+                                        if(i % n1 == 0 && i % n2 == 0){
+                                            output += "FIZZBUZZ"
+                                        }else if(i % n1 == 0){
+                                            output += "Fizz"
+                                        }else if(i % n2 == 0){
+                                            output += "buzz"
+                                        }else{
+                                            output += i;
+                                        }
+                                    }
+                                    //result
+                                        $("#rsltFizzBuzz").text(output).val();
+                                    })
+                                    //clear button cleared
+                                    $("#btnFizzBuzzClear").click(function(){
+                                        $("#fbizzInput1").val("");
+                                        $("#fbizzInput2").val("");
+                                        $("#rsltFizzBuzz").text("");
+                                    });
+                                    //Show Code
+                                    $("#btnFizzBuzzShowCode").click(function () {
+                                        $("#ShowCodeFizzBuzz").toggle();
+                                        if ($(this).text() == "Show Code") {
+                                            $(this).text("Hide Code");
+                                        } else {
+                                            $(this).text("Show Code");
+                                        };
+                                    });
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Modal footer -->
                 <div class="modal-footer">
@@ -545,6 +639,42 @@
                             <button id="btnClearPalindrome" class="btn btn-success">Clear</button>
                         </div>
                     </div>
+                    <!--Show Code-->
+                    <div class="row">
+                        <div class="col-lg">
+                            <div id="ShowCodePalindrome">
+                                <pre class="brush: js">
+                                    //palindrome button clicked
+                                    $("#btnPalindrome").click(function(){
+                                    //get text to test
+                                    var word = $("#inputPalindrome").val();
+                                    function palindrome(word) {
+                                        //Split, reverse and join string to get reversed text
+                                        var reversedText  = word.toLowerCase().split('').reverse().join('');
+                                        //check to see if the word matches first word           
+                                        return word === reversedText;
+                                    }
+                                    //display result
+                                    $("#rsltPalindrome").text("The word: " + palindrome(word));
+                                    });
+                                    //clear button is clicked
+                                    $("#btnClearPalindrome").click(function(){
+                                        $("#inputPalindrome").val("");
+                                        $("#rsltPalindrome").text("");
+                                    });
+                                    //show code
+                                    $("#btnPalindromeShowCode").click(function () {
+                                        $("#ShowCodePalindrome").toggle();
+                                        if ($(this).text() == "Show Code") {
+                                        $(this).text("Hide Code");
+                                    } else {
+                                        $(this).text("Show Code");
+                                        };
+                                    });
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Modal footer -->
                 <div class="modal-footer">
@@ -565,7 +695,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Do Something...
+                    Will do something soon...
                 </div>
 
                 <!-- Modal footer -->
@@ -587,7 +717,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    Do Something..
+                    Will definitely do something soon..
                 </div>
 
                 <!-- Modal footer -->
@@ -704,16 +834,15 @@
                     <p><span><i class="fa fa-envelope-o"></i> Email</span> rhernandezroberto@Gmail.com</p>
                 </div>
             </div>
-
             <!--MAY REMOVE SOCIAL NOT SURE YET-->
             <div class="col-md-12">
                 <div class="row">
                     <div class="social">
                         <ul>
-                            <li><a href="#"><i class="fa fa-github"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="https://github.com/robhercarloz"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/roberto-hernandez-553369104"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope-square"></i></a></li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -739,11 +868,11 @@
     <!--JAVASCRIPT SYNTAX HIGHLIGHTER MUST HAVE-->
     <script src="Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
     <script src="Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+    <!--JAVASCRIPT CODE CHALLENGES-->
+    <script src="Scripts/jsCodeChallenges.js"></script>
     <!--SYNTAX HIGHLIGHTER SCRIPT-->
     <script type="text/javascript">
         SyntaxHighlighter.all();
     </script>
-    <!--JAVASCRIPT CODE CHALLENGES-->
-    <script src="Scripts/jsCodeChallenges.js"></script>
 </body>
 </html>
