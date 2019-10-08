@@ -108,7 +108,7 @@ $(document).ready(function () {
         for(var i = 1; i <= 100; i++){
             //if statement to check if both inputs have remainders if true concatinate
             if(i % n1 == 0 && i % n2 == 0){
-                output += "FIZZBUZZ, ";
+                output += "<span class=`FIZZBUZZ,`>FIZZBUZZ></span>";
             }else if(i % n1 == 0){
                 output += "fizz, ";
             }else if(i % n2 == 0){
