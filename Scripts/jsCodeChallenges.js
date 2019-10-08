@@ -108,17 +108,21 @@ $(document).ready(function () {
         for(var i = 1; i <= 100; i++){
             //if statement to check if both inputs have remainders if true concatinate
             if(i % n1 == 0 && i % n2 == 0){
-                output += "FIZZBUZZ"
+                output += "FIZZBUZZ, ";
             }else if(i % n1 == 0){
-                output += "fizz"
+                output += "fizz, ";
             }else if(i % n2 == 0){
-                output += "buzz"
+                output += "buzz, "
             }else{
-                output += i;
+                output += i + ", ";
             }
         }
+
+        output
+
+
         //result
-        $("#rsltFizzBuzz").text(output).val();
+        $("#rsltFizzBuzz").html(output);
     })
     //clear button cleared
     $("#btnFizzBuzzClear").click(function(){
@@ -135,6 +139,9 @@ $(document).ready(function () {
             $(this).text("Show Code");
         };
     });
+
+
+
 
     //---------------------------------------------------------------------
     //PALINDROME Exercise
