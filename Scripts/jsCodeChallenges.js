@@ -6,8 +6,6 @@ $(document).ready(function () {
     $("#ShowCodeFactorial").hide();
     $("#ShowCodeFizzBuzz").hide();
     $("#ShowCodePalindrome").hide();
-
-
     //MATH Exercise----------------------------------------------------------
 
     //click btn to do math 
@@ -108,11 +106,11 @@ $(document).ready(function () {
         for(var i = 1; i <= 100; i++){
             //if statement to check if both inputs have remainders if true concatinate
             if(i % n1 == 0 && i % n2 == 0){
-                output += "<span class=`FIZZBUZZ,`>FIZZBUZZ></span>";
+                output += "FIZZBUZZ, ";
             }else if(i % n1 == 0){
                 output += "fizz, ";
             }else if(i % n2 == 0){
-                output += "buzz, "
+                output += "buzz, ";
             }else{
                 output += i + ", ";
             }
@@ -139,10 +137,6 @@ $(document).ready(function () {
             $(this).text("Show Code");
         };
     });
-
-
-
-
     //---------------------------------------------------------------------
     //PALINDROME Exercise
 
