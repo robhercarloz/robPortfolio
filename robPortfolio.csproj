@@ -92,6 +92,7 @@
     <Content Include="Images\comingSoonJS.jpg" />
     <Content Include="Images\comingSoonJS1.jpg" />
     <Content Include="Images\computer.jpg" />
+    <Content Include="Images\computerPastal.png" />
     <Content Include="Images\factorial.jpg" />
     <Content Include="Images\favicon-32x32.png" />
     <Content Include="Images\fizzBuzz.jpg" />
