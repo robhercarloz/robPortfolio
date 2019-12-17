@@ -187,6 +187,7 @@
     <Content Include="fonts\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Images\Roberto Hernandez Resume.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\RobertoCHProfile - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
