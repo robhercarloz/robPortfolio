@@ -41,6 +41,26 @@
     <script src="Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
     <script src="Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
     <!--Custom CSS Files-->
+
+
+    <style>
+        .Fizz {
+            color: lightblue;
+            font-weight:bold;
+        }
+
+        .Buzz {
+            color: blue;
+            font-weight:bold;
+
+        }
+
+        .FizzBuzz {
+            color: green;
+            font-weight:bold;
+
+        }
+    </style>
     
     
 
@@ -454,6 +474,7 @@
                             <p id="rsltFizzBuzz" style="word-wrap: break-word"></p>
                         </div>
                     </div>
+                    <br />
                     <!--Buttons-->
                     <div class="row" style="padding: 5px 5px 5px 5px">
                         <div class="col-lg-4 text-center">
@@ -550,6 +571,7 @@
                             <p id="rsltPalindrome"></p>
                         </div>
                     </div>
+                    <br />
                     <!--Buttons-->
                     <div class="row" style="padding: 5px 5px 5px 5px">
                         <div class="col-lg-4 text-center">
@@ -567,19 +589,27 @@
                         <div class="col-lg">
                             <div id="ShowCodePalindrome">
                                 <pre class="brush: js">
-                                    //palindrome button clicked
-                                    $("#btnPalindrome").click(function(){
-                                    //get text to test
-                                    var word = $("#inputPalindrome").val();
-                                    function palindrome(word) {
-                                        //Split, reverse and join string to get reversed text
-                                        var reversedText  = word.toLowerCase().split('').reverse().join('');
-                                        //check to see if the word matches first word           
-                                        return word === reversedText;
-                                    }
-                                    //display result
-                                    $("#rsltPalindrome").text("The word: " + palindrome(word));
-                                    });
+                                    $("#btnPalindrome").click(function () {
+                                       //get word
+                                        var word = $("#inputPalindrome").val();
+                                        //function to check word
+                                        function palindrome(word) {
+                                            //get word to all lower case
+                                            var lowWord = word.toLowerCase();
+                                            //Split, reverse and join string to get reversed text
+                                            var reversedText = lowWord.split("").reverse().join("");
+                                            //check to see if the word matches first word           
+                                            return reversedText === lowWord;
+                                        }
+                                        //simple if statement to check if function returns true or false
+                                        if (palindrome(word) == true) {
+                                            var torFalse = "is";
+                                        } else {
+                                            torFalse = "is not";
+                                        }
+                                        //display result
+                                        $("#rsltPalindrome").text("The word " + word + " " + torFalse + " a palindrome.");
+                                    });    
                                     //clear button is clicked
                                     $("#btnClearPalindrome").click(function(){
                                         $("#inputPalindrome").val("");
@@ -589,11 +619,11 @@
                                     $("#btnPalindromeShowCode").click(function () {
                                         $("#ShowCodePalindrome").toggle();
                                         if ($(this).text() == "Show Code") {
-                                        $(this).text("Hide Code");
-                                    } else {
-                                        $(this).text("Show Code");
+                                            $(this).text("Hide Code");
+                                        } else {
+                                            $(this).text("Show Code");
                                         };
-                                    });
+                                    });        
                                 </pre>
                             </div>
                         </div>
@@ -639,6 +669,7 @@
                             <p id="rsltFactorial"></p>
                         </div>
                     </div>
+                    <br />
                     <!--Buttons-->
                     <div class="row" style="padding: 5px 5px 5px 5px">
                         <div class="col-md-4 text-center">
@@ -732,7 +763,7 @@
                     <!--input/output-->
                     <div class="row">
                         <!--Input Fields-->
-                        <div class="col-md-6 text-left">
+                        <div class="col-md-5">
                             <h5>Enter 5 numbers below</h5>
                             <div class="row my-row-math">
                                 <input id="n1" type="text" required placeholder="ENTER NUMBER" onkeypress="return numbersonly(event)" />
@@ -770,6 +801,7 @@
                             </div>
                         </div>
                     </div>
+                    <br />
                     <!--Buttons-->
                     <div class="row">
                         <div class="col-lg-4">
@@ -875,7 +907,7 @@
         <div class="container">
             <div class="col-md-8 col-md-offset-2 section-title">
                 <h2>Resume</h2>
-                <p>Get a quick look into my resume. If you want to know more about my work you can download my resume or vist my LinkedIn.</p>
+                <p>Get a quick look into my resume. If you want to know more about my work you can download my resume or visit my LinkedIn.</p>
             </div>
             <div id="row">
                 <!--Education-->
@@ -886,7 +918,11 @@
                             <h3>Education</h3>
                             <p>
                                 Forsyth Technical Community College<br />
-                                <ul>-AAS Computer Programming 2017</ul>
+                                <ul>-AAS Computer Programming 2015 - 2017</ul>
+                            </p>
+                            <p>
+                                University of North Carolina at Greensboro<br />
+                                <ul>-BS Computer Science 2017 - present</ul>
                             </p>
                         </div>
                     </div>
@@ -897,7 +933,13 @@
                         <img src="Images/computerPastal.png" alt="..." class="team-img">
                         <div class="caption">
                             <h4>Software Engineering Projects<br /></h4>
-                            <p><ul>Portfolio Website</ul><ul>Bug Tracker</ul><ul>Blog Site</ul></p>
+                            <p>
+                                <ul>Portfolio Website</ul>
+                                <ul>Bug Tracker</ul>
+                                <ul>Blog Site</ul>
+                                <ul>Financial Portal</ul>
+                                <ul>Financial Portal API</ul>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -908,8 +950,8 @@
                         <div class="caption">
                             <h4>Work Experience</h4>
                             <p>
-                                <ul>Bojangles: Cook, 2015-2016</ul><ul>Gildan Yarns: Floater/Roving Technichian, 2017-2017</ul>
-                                <ul>Food Lion: Grocery/Perishable Associate, 2017-2019</ul><ul>Freelance: Computer Repair, 2016-Present</ul>
+                                <ul>Coder Foundry: Software Developer, 2019 - 2019 </ul>
+                                <ul>Freelance: Computer Repair, 2016 - Present</ul>
                             </p>
                         </div>
                     </div>
@@ -935,7 +977,7 @@
             <div class="row" style="text-align: center">
                 <h3>Contact Info</h3>
             </div>
-            <div class="row">
+            <div class="row" style="margin-left: 45px">
                 <div class="col-md-4">
                     <div class="contact-item">                        
                         <p>
@@ -954,10 +996,7 @@
                         <p><span><i class="fa fa-envelope-o"></i> Email</span> rhernandezroberto@Gmail.com</p>
                     </div>
                 </div>
-
             </div>
-
-
             <!--<div class="col-md-3 col-md-offset-1 contact-info">
                 <div class="contact-item">
                     <h3>Contact Info</h3>

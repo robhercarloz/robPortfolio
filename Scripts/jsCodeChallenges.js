@@ -103,21 +103,24 @@ $(document).ready(function () {
         var n2 = $("#fbizzInput2").val();
         var output = "";
         //making loop to count 100
-        for(var i = 1; i <= 100; i++){
+        for (var i = 1; i <= 100; i++){
+            var comma = ", ";
+            if (i == 100) {
+                comma = "";
+            }
             //if statement to check if both inputs have remainders if true concatinate
             if(i % n1 == 0 && i % n2 == 0){
-                output += "FIZZBUZZ, ";
+                output += "<span class='FizzBuzz'>FizzBuzz" + comma + "</span>";
             }else if(i % n1 == 0){
-                output += "fizz, ";
+                output += "<span class='Fizz'>Fizz" + comma + "</span>";
             }else if(i % n2 == 0){
-                output += "buzz, ";
+                output += "<span class='Buzz'>Buzz" + comma + "</span>";
             }else{
-                output += i + ", ";
+                output += i + comma;
             }
         }
 
         output
-
 
         //result
         $("#rsltFizzBuzz").html(output);
@@ -142,17 +145,17 @@ $(document).ready(function () {
 
     //palindrome button clicked
     $("#btnPalindrome").click(function () {
-        //get text to test
-        //if statement to check if user typed anything in
-
+       
         //get word
         var word = $("#inputPalindrome").val();
         //function to check word
         function palindrome(word) {
+            //get word to all lower case
+            var lowWord = word.toLowerCase();
             //Split, reverse and join string to get reversed text
-            var reversedText = word.toLowerCase().split('').reverse().join('');
+            var reversedText = lowWord.split("").reverse().join("");
             //check to see if the word matches first word           
-            return word === reversedText;
+            return reversedText === lowWord;
         }
         //simple if statement to check if function returns true or false
         if (palindrome(word) == true) {
