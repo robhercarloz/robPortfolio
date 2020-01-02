@@ -99,6 +99,7 @@
     <Content Include="Images\job.jpg" />
     <Content Include="Images\numbers.jpg" />
     <Content Include="Images\resume.jpg" />
+    <Content Include="Images\webPortfolio.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\jsCodeChallenges.js" />
     <Content Include="Scripts\SyntaxHighlighter\scripts\shAutoloader.js" />
