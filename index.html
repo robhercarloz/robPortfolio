@@ -305,10 +305,13 @@
                 </div>
                 <!--BUG TRACKER-->
                 <div class="col-md-4">
-                    <a href="https://rhbugtracker.azurewebsites.net/" target="_blank"><i class="fa fa-bug"></i></a>
+                    <a href="" title="Bugtracker" data-toggle="modal" data-target="#myModalBugtracker"><i class="fa fa-bug"></i></a>
                     <div class="service-desc">
                         <h3>BUG TRACKER</h3>
-                        <p>Bug tracker to keep bugs on track.</p>
+                        <p>
+                            The Bug Tracker is a Web based software application designed to mirror any of a wide
+                            variety of bug tracking software systems in use by corporations throughout world.
+                        </p>
                     </div>
                 </div>
                 <!--BLOG SITE-->
@@ -427,7 +430,7 @@
                         <div class="col-lg-6">
                             <p style="text-align:center">Robs Blog</p>
                             <div class="row" style="padding-left: 25px">
-                                <img src="Images/robsBlog.png" alt="Website" class="imgShadow" />
+                                <img src="Images/robsBlog.png" alt="Blogsite" class="imgShadow" />
                             </div>
                             <div class="row" style="padding-top: 15px; padding-left: 15px">
                                 <div class="col-lg-6">
@@ -453,6 +456,9 @@
                                         JQuery
                                     </li>
                                     <li>
+                                        ASP.Net
+                                    </li>
+                                    <li>
                                         C#
                                     </li>
                                     <li>
@@ -471,15 +477,15 @@
                             </h6>
                             <h5>Project Difficulties</h5>
                             <h6>
-                                This project really tested my skills architecting a workable solution. In the beginning of development, 
-                                the first thing I did was start up an S1 azure server. With no plan for action, I wasted a good amount 
+                                This project really tested my skills architecting a workable solution. In the beginning of development,
+                                the first thing I did was start up an S1 azure server. With no plan for action, I wasted a good amount
                                 of time worth of work before I was forced to start over.
                             </h6>
                             <h5>My Solution</h5>
                             <h6>
                                 To solve this struggle, I decided to kick it old school with some good ol’ Object Oriented Design and Analysis.
                                 Following a planning structure, I was able to improve my work efficiency and reach my set sprints.
-                            </h6>                            
+                            </h6>
                             <h5>Notable Features</h5>
                             <ul class="ulLItems">
                                 <li>
@@ -492,7 +498,7 @@
                                     Account Confirmation
                                 </li>
                                 <li>
-                                    Add Comments 
+                                    Add Comments
                                 </li>
                             </ul>
                         </div>
@@ -505,7 +511,101 @@
             </div>
         </div>
     </div>
+    <!--Bugtracker MODAL-->
+    <div class="modal fade" id="myModalBugtracker">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content ">
+                <!-- Modal Header -->
+                <div class="modal-header my-header-custom">
+                    <h4 class="modal-title">Bugtracker</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- MODAL BODY -->
+                <div class="modal-body">
+                    <!--BODY-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p style="text-align:center">RH Bugtracker</p>
+                            <div class="row" style="padding-left: 25px">
+                                <img src="Images/bugTrackerScreenShot.png" alt="Bugtracker" class="imgShadow" />
+                            </div>
+                            <div class="row" style="padding-top: 15px; padding-left: 15px">
+                                <div class="col-lg-6">
+                                    <a href="https://rhbugtracker.azurewebsites.net/Account/Login" target="_blank"><i class="fas fa-tv"></i> Live Preview</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a href="https://github.com/robhercarloz/rhBugTracker" target="_blank"><i class="far fa-file-code-o"></i> View Repo</a>
+                                </div>
+                            </div>
+                            <div class="row" style="padding-top: 10px; padding-left: 15px">
+                                <h5>Technologies Used</h5>
+                                <ul class="ulLItems">
+                                    <li>
+                                        HTML5
+                                    </li>
+                                    <li>
+                                        CSS3
+                                    </li>
+                                    <li>
+                                        JavaScript
+                                    </li>
+                                    <li>
+                                        JQuery
+                                    </li>
+                                    <li>
+                                        Ajax
+                                    </li>
+                                    <li>
+                                        ASP.Net
+                                    </li>
+                                    <li>
+                                        C#
+                                    </li>
+                                    <li>
+                                        SQL
+                                    </li>
+                                </ul>
+                            </div>
 
+                        </div>
+                        <div class="col-lg-5">
+                            <h5>Project</h5>
+                            <h6>
+                                
+                            </h6>
+                            <h5>Project Difficulties</h5>
+                            <h6>
+                                
+                            </h6>
+                            <h5>My Solution</h5>
+                            <h6>
+                                
+                            </h6>
+                            <h5>Notable Features</h5>
+                            <ul class="ulLItems">
+                                <li>
+                                    Registration
+                                </li>
+                                <li>
+                                    Login
+                                </li>
+                                <li>
+                                    Account Confirmation
+                                </li>
+                                <li>
+                                    Add Comments
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer my-footer-custom">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JS Projects / Coding Challenges Section -->
     <div id="portfolio" class="text-center" style="background:#f6f6f6">
