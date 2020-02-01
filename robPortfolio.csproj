@@ -97,6 +97,7 @@
     <Content Include="Images\factorial.jpg" />
     <Content Include="Images\favicon-32x32.png" />
     <Content Include="Images\financialPortal.png" />
+    <Content Include="Images\FinancialPortalAPI.png" />
     <Content Include="Images\fizzBuzz.jpg" />
     <Content Include="Images\job.jpg" />
     <Content Include="Images\numbers.jpg" />
