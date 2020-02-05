@@ -99,9 +99,9 @@
     <Content Include="Images\financialPortal.png" />
     <Content Include="Images\FinancialPortalAPI.png" />
     <Content Include="Images\fizzBuzz.jpg" />
-    <Content Include="Images\job.jpg" />
+    <Content Include="Images\jobHandshake.png" />
     <Content Include="Images\numbers.jpg" />
-    <Content Include="Images\resume.jpg" />
+    <Content Include="Images\resumeDownload.png" />
     <Content Include="Images\robsBlog.png" />
     <Content Include="Images\webPortfolio.png" />
     <Content Include="index.html" />
