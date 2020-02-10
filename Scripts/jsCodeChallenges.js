@@ -180,6 +180,35 @@ $(document).ready(function () {
             $(this).text("Show Code");
         };
     });
+
+    //========================================================================
+    //SUM OF ALL FEARS
+
+    //create function to go when button is clicked
+    $("#btnSumofAllFears").click(function () {
+        //get the inputs
+        var indexZero = + $("#index0").val();
+        var indexOne = + $("#index1").val();
+        var indexTwo = + $("#index2").val();
+        var indexThree = + $("#index3").val();
+        var indexFour = + $("#index4").val();
+
+        //make an array to hold all values
+        var soaFears = [
+            indexZero,
+            indexOne,
+            indexTwo,
+            indexThree,
+            indexFour
+        ];
+
+        //looping in the array to see if any match
+
+
+    })
+
+
+
 });
 
 
