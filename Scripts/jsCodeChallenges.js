@@ -206,6 +206,23 @@ $(document).ready(function () {
 
 
     })
+    //Generate numbers
+    $("#btnGenerate").click(function () {
+        //get id of the textbox and assign it each a random number
+        $("#index0").text(Math.floor(Math.random() * 100) + 1);
+
+
+    })
+    //Clear textfields
+    $("#btnClearSOAF").click(function () {
+        $("#index0").val('');
+        $("#index1").val('');
+        $("#index2").val('');
+        $("#index3").val('');
+        $("#index4").val('');
+        $("#kvalue").val('');
+
+    });
 
 
 
