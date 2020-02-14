@@ -88,8 +88,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#features" class="page-scroll">Skills</a></li>
                     <li><a href="#about" class="page-scroll">About</a></li>
-                    <li><a href="#services" class="page-scroll">Portfolio</a></li>
-                    <li><a href="#portfolio" class="page-scroll">JS Projects</a></li>
+                    <li><a href="#services" class="page-scroll">Projects</a></li>
+                    <li><a href="#portfolio" class="page-scroll">Coding Challenges</a></li>
                     <!--<li><a href="https://rhblog.azurewebsites.net/">Blog</a></li>-->
                     <!--<li><a href="#testimonials" class="page-scroll">Portfolio</a></li>-->
                     <li><a href="#team" class="page-scroll">Resume</a></li>
@@ -946,6 +946,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!--5th Challenge-->
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="portfolio-item">
@@ -954,11 +955,12 @@
                                     <div class="hover-text">
                                         <h4>Sum of all Fears</h4>
                                     </div>
-                                    <img src="Images/comingSoonJS.jpg" class="img-responsive" alt="Coding Challenge 5">
+                                    <img src="Images/SOAFImage.png" class="img-responsive" alt="Coding Challenge 5">
                                 </a>
                             </div>
                         </div>
                     </div>
+                    
                     <!--6th Challenge-->
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="portfolio-item">
@@ -1409,6 +1411,7 @@
                 </div>
                 <!-- Modal body -->
                 <div class="modal-body">
+                    <!--Entries-->
                     <div class="row">
                         <div class="col-md-12">
                             <div class="col-sm-2">
@@ -1429,21 +1432,24 @@
                             <div class="col-sm-2">
                                 <input id="kvalue" class="form-control" type="text" placeholder="K" onkeypress="return numbersonly(event)" />
                             </div>
-                        </div>                        
+                        </div>
                     </div>
+                    <!--Results-->
                     <div class="row">
-                        <p style="text-align:center" id="soafResult">test</p>
+                        <p style="text-align:center" id="soafResult"></p>
                     </div>
+                    <!--Summary-->
                     <div class="row" style="padding: 15px">
                         <h4 class="text-center">
                             Summary
                         </h4>
                         <p style="text-align: center"></p>
                         <p>
-                            Given a list of numbers and a number k, return whether any two numbers from the list add up to k. For example, 
+                            Given a list of numbers and a number k, return whether any two numbers from the list add up to k. For example,
                             given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17. Click GENERATE to generate numbers for you, and click go to check for k.
                         </p>
                     </div>
+                    <!--Buttons-->
                     <div class="row">
                         <div class="col-lg-3">
                             <button id="btnSumofAllFears" class="btn btn-success my-btn-calculate" style="text-align:center">
@@ -1455,20 +1461,86 @@
                                 GENERATE!
                             </button>
                         </div>
-                        <div class="col-lg-3">
-                            <button id="btnShowCodeSOAF" class="btn btn-warning my-btn-calculate" style="text-align:center">
-                                SHOW CODE
-                            </button>
+                        <div class="col-lg-3 text-center">
+                            <button id="btnShowCodeSOAF" class="btn btn-warning my-btn-calculate">SHOW CODE</button>
                         </div>
                         <div class="col-lg-3">
                             <button id="btnClearSOAF" class="btn my-btn-clear" style="text-align:center">
                                 CLEAR
                             </button>
                         </div>
-
-
                     </div>
+                    <!--Show Code-->
+                    <div class="row">
+                        <div class="col-md">
+                            <div id="ShowCodeSOAF">
+                                <pre class="brush: js">
+                                    //get the inputs
+                                    var indexZero = + $("#index0").val();
+                                    var indexOne = + $("#index1").val();
+                                    var indexTwo = + $("#index2").val();
+                                    var indexThree = + $("#index3").val();
+                                    var indexFour = + $("#index4").val();
+                                    var kvalue = + $("#kvalue").val();
+                                    //Condition to check the boxes are not empty
+                                    if (indexZero != null && indexOne != null && indexTwo != null && indexThree != null && indexFour != null && kvalue) {
+                                        //make an array to hold all values
+                                        var soaFears = [
+                                            indexZero,
+                                            indexOne,
+                                            indexTwo,
+                                            indexThree,
+                                            indexFour
+                                        ];
+                                        //looping in the array to see if any match
+                                        for (var i = 0; i < 4; i++) {
+                                            //going through array and taking final value for comparing sums
+                                            var pulledNumber = soaFears.pop();
+                                            console.log('The array just popped ' + pulledNumber + ' to compare.')
+                                            //remaining array values shown in console
+                                            console.log('Your remaining array values are:')
+                                            console.log(soaFears);
+                                            //add pulled value to remaining array indexes
+                                            console.log('Adding pulled number to array:')
+                                            var modifiedArray = soaFears.map(addPulled)
 
+                                            function addPulled(num) {
+                                                return num + pulledNumber;
+
+                                            }
+
+                                            console.log(modifiedArray);
+
+                                            //find funct
+                                            function doesKExist(modifiedArray) {
+                                                return modifiedArray == kvalue;
+                                            }
+
+                                            //store sum being searched in variable
+                                            var kWasFound = modifiedArray.find(doesKExist);
+                                            console.log(kWasFound);
+
+
+                                            if (kWasFound === kvalue) {
+                                                break;
+                                            }
+                                        }
+                                        //show result in output field
+                                        if (kvalue === kWasFound) {
+                                            $("#soafResult").text("Found match for k!")
+                                            console.log("K Exists!")
+                                        } else {
+                                            $("#soafResult").text("There are no matches for k.")
+                                            console.log("K is not found.")
+                                        }
+                                    } else {
+                                        $("#soafResult").text("Error: please fill in all empty textboxes!")            
+                                    }        
+                                });
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- Modal footer -->
                 <div class="modal-footer">
@@ -1477,6 +1549,7 @@
             </div>
         </div>
     </div>
+
     <!--Modal 6: Coming Soon-->
     <div class="modal fade" id="myModal6">
         <div class="modal-dialog">

@@ -89,7 +89,6 @@
     <Content Include="Images\apple-touch-icon.png" />
     <Content Include="Images\bkWall.jpg" />
     <Content Include="Images\bugTrackerScreenShot.png" />
-    <Content Include="Images\comingSoonJS.jpg" />
     <Content Include="Images\comingSoonJS1.jpg" />
     <Content Include="Images\factorial.jpg" />
     <Content Include="Images\favicon-32x32.png" />
@@ -102,6 +101,7 @@
     <Content Include="Images\numbers.jpg" />
     <Content Include="Images\resumeDownload.png" />
     <Content Include="Images\robsBlog.png" />
+    <Content Include="Images\SOAFImage.png" />
     <Content Include="Images\webPortfolio.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\jsCodeChallenges.js" />

@@ -6,6 +6,7 @@ $(document).ready(function () {
     $("#ShowCodeFactorial").hide();
     $("#ShowCodeFizzBuzz").hide();
     $("#ShowCodePalindrome").hide();
+    $("#ShowCodeSOAF").hide();
     //MATH Exercise----------------------------------------------------------
 
     //click btn to do math 
@@ -258,7 +259,7 @@ $(document).ready(function () {
         $("#index2").val(Math.floor(Math.random() * 200) + 1);
         $("#index3").val(Math.floor(Math.random() * 200) + 1);
         $("#index4").val(Math.floor(Math.random() * 200) + 1);
-    })
+    });
     //Clear textfields
     $("#btnClearSOAF").click(function () {
         $("#index0").val('');
@@ -269,7 +270,15 @@ $(document).ready(function () {
         $("#kvalue").val('');
         $("#soafResult").text("");
     });
-
+    //Show Code
+    $("#btnShowCodeSOAF").click(function () {
+        $("#ShowCodeSOAF").toggle();
+        if ($(this).text() == "SHOW CODE") {
+            $(this).text("HIDE CODE");
+        } else {
+            $(this).text("SHOW CODE");
+        };
+    });
 
 
 });
