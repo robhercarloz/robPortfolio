@@ -88,6 +88,8 @@
     <Content Include="Images\about.jpg" />
     <Content Include="Images\apple-touch-icon.png" />
     <Content Include="Images\bkWall.jpg" />
+    <Content Include="Images\blogSite.png" />
+    <Content Include="Images\bugtrackerIcon.png" />
     <Content Include="Images\bugTrackerScreenShot.png" />
     <Content Include="Images\comingSoonJS1.jpg" />
     <Content Include="Images\factorial.jpg" />
@@ -103,6 +105,7 @@
     <Content Include="Images\robsBlog.png" />
     <Content Include="Images\SOAFImage.png" />
     <Content Include="Images\webPortfolio.png" />
+    <Content Include="Images\websiteIcon.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\jsCodeChallenges.js" />
     <Content Include="Scripts\SyntaxHighlighter\scripts\shAutoloader.js" />
