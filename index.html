@@ -68,7 +68,17 @@
             padding-left: 10px;
             list-style-type: circle;
         }
-
+        .hover{
+            cursor: pointer;
+        }
+        .threed:hover{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+        }
                 
     </style>
        
@@ -86,8 +96,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#features" class="page-scroll">Skills</a></li>
                     <li><a href="#about" class="page-scroll">About</a></li>
+                    <li><a href="#features" class="page-scroll">Skills</a></li>
                     <li><a href="#services" class="page-scroll">Projects</a></li>
                     <li><a href="#portfolio" class="page-scroll">Coding Challenges</a></li>
                     <!--<li><a href="https://rhblog.azurewebsites.net/">Blog</a></li>-->
@@ -109,13 +119,55 @@
                         <div class="col-md-8 col-md-offset-2 intro-text">
                             <h1>ROBERTO HERNANDEZ<span></span></h1>
                             <p>I'm a software developer with hundreds of hours working and always looking to learn new technologies!</p>
-                            <a href="#features" class="btn btn-custom btn-lg page-scroll">Get to know me!</a>
+                            <a href="#about" class="btn btn-custom btn-lg page-scroll">Get to know me!</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6"> <img src="Images/about.jpg" class="img-responsive" alt=""> </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>
+
+                            Hello, my name is Roberto Hernandez. I have been studying computer programming for the past five years and look forward to continuing to sharpen my skills in
+                            my next software development role. I found my love of programing from an early age and knew my passion in life was to write software.
+                            I hold an Associates degree in Applied Science in Computer Programing from Forsyth Community College. I also completed the fully immersive Coder Foundry program
+                            to learn the .NET stack. Technologies including: HTML, CSS, JavaScript, and coding C# on the backend and SQL database.
+                            If you’re in need of a developer to join the team, let’s connect!
+
+                        </p>
+                        <h3>SKILLS</h3>
+                        <div class="list-style">
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <ul>
+                                    <li>Problem Solver</li>
+                                    <li>Computer Knowledge</li>
+                                    <li>Quick Learner</li>
+                                    <li>Time Management</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <ul>
+                                    <li>Bilingual</li>
+                                    <li>Customer Service</li>
+                                    <li>Creativity</li>
+                                    <li>Teamwork</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--Programming badges-->
     <div id="badges">
@@ -218,7 +270,7 @@
                 <div class="col-xs-6 col-md-3">
                     <i class="fa fa-file-code-o"></i>
                     <h3>Programming Languages</h3>
-                    <p>Java, C#, ASP.Net, VB.Net, HTML, CSS, JavaScript, jQuery, Bash Scripting </p>
+                    <p>Java, C#, ASP.Net, VB.Net, HTML, CSS, JavaScript, jQuery, Bash Scripting, etc. </p>
                 </div>
                 <div class="col-xs-6 col-md-3">
                     <i class="fa fa-database"></i>
@@ -239,48 +291,6 @@
         </div>
     </div>
 
-    <!-- About Section -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-6"> <img src="Images/about.jpg" class="img-responsive" alt=""> </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="about-text">
-                        <h2>About Me</h2>
-                        <p>
-
-                            Hello, my name is Roberto Hernandez. I have been studying computer programming for the past five years and look forward to continuing to sharpen my skills in
-                            my next software development role. I found my love of programing from an early age and knew my passion in life was to write software.
-                            I hold an Associates degree in Applied Science in Computer Programing from Forsyth Community College. I also completed the fully immersive Coder Foundry program
-                            to learn the .NET stack. Technologies including: HTML, CSS, JavaScript, and coding C# on the backend and SQL database.
-                            If you’re in need of a developer to join the team, let’s connect!
-
-                        </p>
-                        <h3>SKILLS</h3>
-                        <div class="list-style">
-                            <div class="col-lg-6 col-sm-6 col-xs-12">
-                                <ul>
-                                    <li>Problem Solver</li>
-                                    <li>Computer Knowledge</li>
-                                    <li>Quick Learner</li>
-                                    <li>Time Management</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-xs-12">
-                                <ul>
-                                    <li>Bilingual</li>
-                                    <li>Customer Service</li>
-                                    <li>Creativity</li>
-                                    <li>Teamwork</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Portfolio Projects -->
     <div id="services" class="text-center">
         <div class="container">
@@ -292,7 +302,7 @@
             <!--FIRST ROW OF PROJECTS-->
             <div class="row">
                 <div class="col-md-4 col-sm-6 team">
-                    <div class="thumbnail">
+                    <div class="thumbnail hover threed" data-toggle="modal" data-target="#myModalWebSite">
                         <img src="Images/wwwIcon.png" alt="Website" class="team-img">
                         <div class="caption">
                             <h4>Web Portfolio</h4>
@@ -301,7 +311,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 team">
-                    <div class="thumbnail">
+                    <div class="thumbnail hover threed" data-toggle="modal" data-target="#myModalBlogSite">
                         <img src="Images/BlogIcon.png" alt="Blogsite" class="team-img">
                         <div class="caption">
                             <h4>Blog Site</h4>
@@ -310,7 +320,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 team">
-                    <div class="thumbnail">
+                    <div class="thumbnail hover threed" data-toggle="modal" data-target="#myModalBugtracker">
                         <img src="Images/IssueTrackerIcon.png" alt="Bugtracker" class="team-img">
                         <div class="caption">
                             <h4>Bug tracker/Issue Tracker</h4>
@@ -320,13 +330,13 @@
                             </h6>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
             <!--SECOND ROW OF PROJECTS-->
             <div class="row">
                 <div class="col-md-4 col-sm-6 team">
-                    <div class="thumbnail">
-                        <img src="Images/APIicon.png" alt="Financial Portal API" class="team-img">
+                    <div class="thumbnail hover threed" data-toggle="modal" data-target="#myModalFinancialAPI">
+                        <img src="Images/APIicon.png" alt="Financial Portal API" class="team-imgn">
                         <div class="caption">
                             <h4>Financial Portal Phase II (Web API 2)</h4>
                             <h6>The usage of Application Programming Interfaces (API)</h6>
@@ -334,7 +344,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 team">
-                    <div class="thumbnail">
+                    <div class="thumbnail hover threed" data-toggle="modal" data-target="#myModalJavaPOS">
                         <img src="Images/PointofSaleIcon.png" alt="Java Project" class="team-img">
                         <div class="caption">
                             <h4>Point of Sale System</h4>
@@ -343,14 +353,14 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 team">
-                    <div class="thumbnail">
+                    <div class="thumbnail hover threed" data-toggle="modal" data-target="#myModalFinancialPortal">
                         <img src="Images/FinancialPortalIcon.png" alt="Financial Portal" class="team-img">
                         <div class="caption">
                             <h4>Financial Portal</h4>
                             <h6>Financial portal to keep track of your expenses!</h6>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -688,7 +698,7 @@
                         <div class="col-lg-5">
                             <h5>Project</h5>
                             <h6>
-                                The Household Budgeter is a Web-based software application designed for creating and managing budgets for household finances and the balancing of bank accounts. 
+                                The Household Budgeter is a Web-based software application designed for creating and managing budgets for household finances and the balancing of bank accounts.
                                 It must function as an online service that may be used in multiple households/families throughout the world.
                             </h6>
                             <h5>Notable Features</h5>
@@ -777,7 +787,7 @@
                             <h5>Project</h5>
                             <h6>
                                 This is the second phase of the Financial portal that is A Web Service that utilizes Swagger and Swashbuckle for integrated testing.
-                            </h6>                            
+                            </h6>
                             <h5>Notable Features</h5>
                             <ul class="ulLItems">
                                 <li>
@@ -843,7 +853,7 @@
                                     </li>
                                     <li>
                                         SQL
-                                    </li>                                    
+                                    </li>
                                 </ul>
                             </div>
 
@@ -851,10 +861,10 @@
                         <div class="col-lg-5">
                             <h5>Project</h5>
                             <h6>
-                                The sales and inventory management systems for Ssalefish Comics have both been redesigned to increase efficiency. 
+                                The sales and inventory management systems for Ssalefish Comics have both been redesigned to increase efficiency.
                                 We included logins to enforce data security and to maintain data integrity as well as the feature to add and easily
                                 manage vendor purchased goods as well as secondhand merchandise. The design of the Ssalefish Comics web portal was also updated and modernized.
-                            </h6>                            
+                            </h6>
                             <h5>Notable Features</h5>
                             <ul class="ulLItems">
                                 <li>
@@ -872,7 +882,7 @@
                                 <li>
                                     Transactions
                                 </li>
-                                                             
+
                             </ul>
                         </div>
                     </div>
@@ -910,7 +920,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!--2nd Challenge-->
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="portfolio-item">
@@ -924,7 +933,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!--3d coding challenge-->
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="portfolio-item">
@@ -938,7 +946,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!--4th coding challenge-->
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="portfolio-item">
@@ -952,7 +959,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!--5th Challenge-->
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="portfolio-item">
@@ -966,7 +972,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <!--6th Challenge-->
                     <div class="col-sm-6 col-md-4 col-lg-4">
                         <div class="portfolio-item">
@@ -1568,7 +1573,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    
+
                 </div>
 
                 <!-- Modal footer -->
